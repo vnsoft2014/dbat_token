@@ -321,10 +321,10 @@ contract DBATToken is
         PancakeRouter = __pancakeRouter;
 
         // Pancake Router
-        //_pancakeRouter = IPancakeRouter02(PancakeRouter);
+        _pancakeRouter = IPancakeRouter02(PancakeRouter);
         //Creates a Pancake Pair
-        //_pancakePairAddress = IPancakeFactory(_pancakeRouter.factory())
-            //.createPair(address(this), _pancakeRouter.WETH());
+        _pancakePairAddress = IPancakeFactory(_pancakeRouter.factory())
+            .createPair(address(this), _pancakeRouter.WETH());
 
         maxTax = 100;
 
